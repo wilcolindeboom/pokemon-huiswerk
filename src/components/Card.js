@@ -2,7 +2,7 @@ import React, {useEffect,useState} from 'react';
 import '../App.css';
 import axios from "axios";
 
-function Card({name,img,moves,weight,abilities, url}) {
+function Card({name, url}) {
 
     const [cardData,setcardData] = useState();
 
@@ -31,7 +31,7 @@ function Card({name,img,moves,weight,abilities, url}) {
         <>
                  <article className="card">
                     <h1>{name}</h1>
-                    <img src={img} alt="name"/>
+                    <img src="" alt="name"/>
                     <h2>Moves: {cardData.moves.length}</h2>
                     <h2>Weight: {cardData.weight}</h2>
                     <h2>Abilities:</h2>

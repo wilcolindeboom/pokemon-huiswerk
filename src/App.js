@@ -45,10 +45,6 @@ function App() {
               {pokemonData.results.map(result =>
         <Card
             name={result.name}
-            img=""
-            moves="78"
-            weight="69"
-            abilities={["overgrow","chlorophyl"]}
             url={result.url}
         />
               )}
