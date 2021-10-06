@@ -38,7 +38,7 @@ function App() {
       <>
           <img src="" alt="Pokemon logo"/>
           <nav className="browser">
-          <Button onClick={()=> setOffset(offset-20) } disabled={pokemonData.next === null}>Vorige</Button>
+          <Button onClick={()=> setOffset(offset-20) } disabled={pokemonData.previous === null}>Vorige</Button>
           <Button onClick={()=> setOffset(offset+20) } disabled={pokemonData.next === null}>Volgende</Button>
           </nav>
           <div className="cardcontainer">
