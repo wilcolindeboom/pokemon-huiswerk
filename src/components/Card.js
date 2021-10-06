@@ -31,7 +31,7 @@ function Card({name, url}) {
         <>
                  <article className="card">
                     <h1>{name}</h1>
-                    <img src="" alt="name"/>
+                    <img src={cardData.sprites.front_default} alt={name}/>
                     <h2>Moves: {cardData.moves.length}</h2>
                     <h2>Weight: {cardData.weight}</h2>
                     <h2>Abilities:</h2>
