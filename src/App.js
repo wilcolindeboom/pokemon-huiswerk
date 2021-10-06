@@ -9,7 +9,7 @@ function App() {
 
     const [offset,setOffset] = useState(0);
     const [pokemonData,setPokemonData] = useState();
-    // const {next,previous} = pokemonData;
+    //const {next,previous} = pokemonData;
 
 
 
@@ -28,26 +28,31 @@ function App() {
     useEffect(
         () => {
             fetchData(offset);
-        }
+                    }
         ,[offset]
     );
 
 
 
-  return (
+    return (
       <>
           <img src="" alt="Pokemon logo"/>
           <nav className="browser">
-          <Button onClick={()=> setOffset(offset-20) } disabled={pokemonData.previous === null}>Vorige</Button>
+          <Button onClick={()=> setOffset(offset-20) } disabled={pokemonData.next === null}>Vorige</Button>
           <Button onClick={()=> setOffset(offset+20) } disabled={pokemonData.next === null}>Volgende</Button>
           </nav>
+          <div className="cardcontainer">
+              {pokemonData.results.map(result =>
         <Card
-            name="name"
+            name={result.name}
             img=""
             moves="78"
             weight="69"
             abilities={["overgrow","chlorophyl"]}
+            url={result.url}
         />
+              )}
+          </div>
       </>
   );
 }
